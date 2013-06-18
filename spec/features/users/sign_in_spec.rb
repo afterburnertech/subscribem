@@ -1,5 +1,7 @@
 require 'spec_helper'
 require 'subscribem/testing_support/subdomain_helpers'
+require 'subscribem/testing_support/factories/account_factory'
+require 'subscribem/testing_support/factories/user_factory'
 
 feature 'User sign in' do
 	extend SubdomainHelpers
