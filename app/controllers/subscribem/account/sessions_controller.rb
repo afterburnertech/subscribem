@@ -10,8 +10,12 @@ module Subscribem
   		#the authenticate method is defined in:
   		#/config/initializers/warden/strategies/password.rb
   		if env['warden'].authenticate(:scope => :user)
-  			flash[:notice] = "You are now signed in"
+  			flash[:notice] = "You are now signed in."
   			redirect_to root_path
+  		else
+  			@user = User.new
+  			flash[:error] = "Invalid email or password."
+  			render :action => "new"
   		end
   	end
   end
