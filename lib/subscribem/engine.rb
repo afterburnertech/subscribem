@@ -3,7 +3,10 @@ module Subscribem
     isolate_namespace Subscribem
     require "warden"
     require "dynamic_form"
-    config.middleware.use Warden::Manager
+    
+    config.middleware.use Warden::Manager do |manager|
+    	manager.default_strategies :password
+    end
     
     #make our engine always user RSpec instead of typical unit tests
     config.generators do |g|
