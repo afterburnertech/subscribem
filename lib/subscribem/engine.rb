@@ -16,9 +16,9 @@ module Subscribem
 
     #moved this to config/initializers/warden.rb to add the middleware
     #to the application stack
-    config.middleware.use Warden::Manager do |manager|
-    	manager.default_strategies :password
-    end
+    #config.middleware.use Warden::Manager do |manager|
+    #	manager.default_strategies :password
+    #end
     
     #make our engine always user RSpec instead of typical unit tests
     config.generators do |g|

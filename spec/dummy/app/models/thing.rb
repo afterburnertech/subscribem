@@ -1,5 +1,6 @@
 class Thing < ActiveRecord::Base
   attr_accessible :account, :name
-  belongs_to :account, :class_name => "Subscribem::Account"
+  #defined in lib/active_record_extensions
+  scoped_to_account
 
 end
