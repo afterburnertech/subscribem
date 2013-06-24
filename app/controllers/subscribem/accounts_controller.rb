@@ -16,7 +16,7 @@ module Subscribem
         flash[:success] = "Your account has been successfully created."
         redirect_to subscribem.root_url(:subdomain => @account.subdomain)
       else
-        flash[:error] = "Sorry, your account could not be created."
+        flash[:error] = "Sorry, your account could not be created"
         render :new
       end
 

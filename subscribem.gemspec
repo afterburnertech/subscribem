@@ -29,5 +29,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'capybara', '2.1.0'
   s.add_development_dependency "factory_girl", "4.1.0"
   s.add_development_dependency 'annotate', '2.5.0' #used to annotate Models 'bundle exec annotate'
+  #used instead of 'transactional_fixtures' (spec_helper.rb)
+  s.add_development_dependency "database_cleaner", "0.9.1"
 
 end

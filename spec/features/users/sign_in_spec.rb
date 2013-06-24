@@ -5,7 +5,7 @@ require 'subscribem/testing_support/factories/user_factory'
 
 feature 'User sign in' do
 	extend Subscribem::TestingSupport::SubdomainHelpers
-	let!(:account) { FactoryGirl.create(:account) }
+	let!(:account) { FactoryGirl.create(:account_with_schema) }
 	let(:sign_in_url) { "http://#{account.subdomain}.example.com/sign_in" }
 	let(:root_url) { "http://#{account.subdomain}.example.com/" }
 	within_account_subdomain do
