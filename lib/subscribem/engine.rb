@@ -3,6 +3,7 @@ module Subscribem
     isolate_namespace Subscribem
     require "warden"
     require "dynamic_form"
+    require 'apartment'
 
     #the to_prepare block runs everytime a new request happens in development
     #it will only run once in prod --while the server is starting up
