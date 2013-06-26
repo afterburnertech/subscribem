@@ -16,7 +16,7 @@ require 'subscribem/testing_support/database_cleaning'
 Dir[Rails.root.join("/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
-
+  config.include Warden::Test::Helpers, :type => :feature
   config.include Subscribem::TestingSupport::DatabaseCleaning
 
   # ## Mock Framework

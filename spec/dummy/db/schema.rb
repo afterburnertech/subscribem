@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130621143359) do
+ActiveRecord::Schema.define(:version => 20130626151036) do
 
   create_table "subscribem_accounts", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(:version => 20130621143359) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "subscribem_plans", :force => true do |t|
+    t.string   "name"
+    t.integer  "amount"
+    t.string   "braintree_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "subscribem_users", :force => true do |t|
