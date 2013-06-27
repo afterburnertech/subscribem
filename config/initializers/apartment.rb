@@ -1,12 +1,12 @@
-#Apartment Elevator will switch between schemas (search-path) based on the subdomain for a request
-#it is mounted between the Rack and the Rails Application that the Subscribem engine is 
-#mounted in
+# Apartment Elevator will switch between schemas (search-path) based on the subdomain for a request
+# it is mounted between the Rack and the Rails Application that the Subscribem engine is 
+# mounted in
 Rails.application.config.middleware.use 'Apartment::Elevators::Subdomain'
 
+# This collection includes the models that are not scoped by the schema lookup by the Apartment gem
 Apartment.excluded_models = ["Subscribem::Account", 
 							"Subscribem::Member",
 							"Subscribem::User",
-							"Subscribem::AccountsUser",
 							"Subscribem::Plan"]
 
 # give the Apartment gems a list of the schemas to migrate
