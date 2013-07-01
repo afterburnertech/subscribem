@@ -26,5 +26,14 @@
 			redirect_to '/sign_in'
 		end
 	end
+
+	def force_authentication!(user)
+		env['warden'].set_user(user.id, :scope => :user)
+	end
+
+	def owner?
+		current_account.owner?(current_user)
+	end
+	helper_method :owner?
 	
 end
