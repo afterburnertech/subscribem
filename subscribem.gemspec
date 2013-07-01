@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Subscribem::VERSION
   s.authors     = ["Test Pilot"]
   s.email       = ["brandon@afterburnertechnologies.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Subscribem."
-  s.description = "TODO: Description of Subscribem."
+  s.homepage    = "https://www.stealthdebriefing.com"
+  s.summary     = "Summary of Subscribem."
+  s.description = "Description of Subscribem."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   #error messages for forms
   s.add_dependency "dynamic_form", "1.1.4"
   s.add_dependency 'apartment', '0.21.1'
+  s.add_dependency "braintree", '2.22.0'
 
   s.add_development_dependency "pg"
   s.add_development_dependency 'rspec-rails', '2.12.2'
