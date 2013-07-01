@@ -12,20 +12,8 @@ describe BraintreePlanFetcher do
 		Subscribem::Plan.should_receive(:create).with({
 			:braintree_id 	=> "faux1",
 			:name 			=> "Starter",
-			:amount			=> "9.95"
+			:price			=> "9.95"
 			})
 	BraintreePlanFetcher.store_locally
-	end
-	it "checks and updates plans" do
-		Braintree::Plan.should_receive(:all).and_return([faux_plan])
-		Subscribem::Plan.should_receive(:find_by_braintree_id).
-						with('faux1').
-						and_return(plan = stub)
-		plan.should_receive(:update_attributes).with({
-			:name => "Starter",
-			:amount => "9.95"
-			})
-		Subscribem::Plan.should_not_receive(:create)
-		BraintreePlanFetcher.store_locally
 	end
 end
