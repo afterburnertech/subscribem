@@ -9,12 +9,6 @@ Subscribem::Engine.routes.draw do
 			post '/sign_in', :to => "sessions#create", :as => :sessions
 			get '/sign_up', :to => "users#new", :as => :user_sign_up
 			post '/sign_up', :to => "users#create", :as => :user_sign_up
-<<<<<<< HEAD
-=======
-			get '/account', :to => "accounts#edit", :as => :edit_account
-			put '/account', :to => "accounts#update"
-			get '/account/plan/:plan_id', :to => "accounts#plan", :as => :plan_account
->>>>>>> parent of 4f72109... Revert "I'm done with this book....yuck."
 		end
 	end
 
