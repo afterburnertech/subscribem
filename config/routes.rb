@@ -14,6 +14,9 @@ Subscribem::Engine.routes.draw do
 			get '/account', :to => "accounts#edit", :as => :edit_account
 			put '/account', :to => "accounts#update"
 			get '/account/plan/:plan_id', :to => "accounts#plan", :as => :plan_account
+<<<<<<< HEAD
+>>>>>>> parent of 4f72109... Revert "I'm done with this book....yuck."
+=======
 >>>>>>> parent of 4f72109... Revert "I'm done with this book....yuck."
 		end
 	end
