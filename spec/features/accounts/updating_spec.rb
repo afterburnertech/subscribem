@@ -58,10 +58,8 @@ feature "Accounts" do
 				select 'Extreme', :from => 'Plan'
 				click_button "Update Account"
 				page.should have_content("Account updated successfully.")
-				plan_url = subscribem.plan_account_url(
-					:plan_id => extreme_plan.id,
-					:subdomain => account.subdomain)
-				page.current_url.should == plan_url
+				page.should have_content("You are now on the 'Extreme' plan.")
+				account.reload.plan.should == extreme_plan
 			end
 		end
 	end
