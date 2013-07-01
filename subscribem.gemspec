@@ -7,8 +7,8 @@ require "subscribem/version"
 Gem::Specification.new do |s|
   s.name        = "subscribem"
   s.version     = Subscribem::VERSION
-  s.authors     = ["Test Pilot"]
-  s.email       = ["brandon@afterburnertechnologies.com"]
+  s.authors     = ["TODO: Your name"]
+  s.email       = ["TODO: Your email"]
   s.homepage    = "TODO"
   s.summary     = "TODO: Summary of Subscribem."
   s.description = "TODO: Description of Subscribem."

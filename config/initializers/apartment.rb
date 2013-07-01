@@ -5,11 +5,4 @@ Rails.application.config.middleware.use 'Apartment::Elevators::Subdomain'
 
 Apartment.excluded_models = ["Subscribem::Account", 
 							"Subscribem::Member",
-							"Subscribem::User",
-							"Subscribem::AccountsUser",
-							"Subscribem::Plan"]
-
-# give the Apartment gems a list of the schemas to migrate
-# pluck will fetch all the subdomain values for the records in subscribem_accounts				
-# and return them in an array.  This array is used by apartment:migrate
-Apartment.database_names = lambda{ Subscribem::Account.pluck(:subdomain) }
+							"Subscribem::User"]
